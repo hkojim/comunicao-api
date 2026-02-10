@@ -1,9 +1,9 @@
 package miyamoto.comunicaco_api.infraestructure.repositories;
 
 import miyamoto.comunicaco_api.infraestructure.entities.ComunicacaoEntity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ComunicacaoRepository extends CrudRepository<ComunicacaoEntity, Long> {
+public interface ComunicacaoRepository extends JpaRepository<ComunicacaoEntity, Long> {
 
     ComunicacaoEntity findByEmailDestinatario(String nomeDestinatario);
 }
