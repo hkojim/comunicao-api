@@ -7,6 +7,7 @@ import miyamoto.comunicaco_api.infraestructure.enums.ModoEnvioEnum;
 import miyamoto.comunicaco_api.infraestructure.enums.StatusEnvioEnum;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -17,14 +18,14 @@ import java.util.Date;
 @Builder
 @Entity
 @Table(name = "COMUNICACAO")
-public class ComunicacaoEntity implements Serializable {
+public class ComunicacaoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "HORA_ENVIO", nullable = false)
-    private Date dataHoraenvio;
+    private LocalDateTime dataHoraEnvio;
 
     @Column(name = "NOME_DESTINATARIO", nullable = false)
     private String nomeDestinatario;
