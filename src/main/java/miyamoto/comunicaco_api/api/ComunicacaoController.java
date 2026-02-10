@@ -32,12 +32,14 @@ public class ComunicacaoController {
 
     @GetMapping()
     @Operation(summary = "Buscar mensagem", description = "Buscar mensagem por email")
+    @ApiResponse(responseCode = "200", description = "Mensagem encontrada")
     public ResponseEntity<ComunicacaoOutDTO> buscarStatus(@RequestParam String emailDestinatario) {
         return ResponseEntity.ok(service.buscarStatusComunicacao(emailDestinatario));
     }
 
     @PatchMapping("/cancelar")
     @Operation(summary = "Cancelar mensagem", description = "Cancela mensagem por email")
+    @ApiResponse(responseCode = "200", description = "Mensagem cancelada")
     public ResponseEntity<ComunicacaoOutDTO> cancelarStatus(@RequestParam String emailDestinatario) {
         return ResponseEntity.ok(service.alterarStatusComunicacao(emailDestinatario));
     }
