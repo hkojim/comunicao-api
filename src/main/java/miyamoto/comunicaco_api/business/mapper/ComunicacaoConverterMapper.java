@@ -4,7 +4,6 @@ import miyamoto.comunicaco_api.api.dto.ComunicacaoInDTO;
 import miyamoto.comunicaco_api.api.dto.ComunicacaoOutDTO;
 import miyamoto.comunicaco_api.infraestructure.entities.ComunicacaoEntity;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface ComunicacaoConverterMapper {
