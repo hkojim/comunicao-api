@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import miyamoto.comunicaco_api.infraestructure.enums.ModoEnvioEnum;
 import miyamoto.comunicaco_api.infraestructure.enums.StatusEnvioEnum;
-
 import java.time.LocalDateTime;
 
 @Getter

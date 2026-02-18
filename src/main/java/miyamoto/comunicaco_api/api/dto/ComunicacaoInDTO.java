@@ -4,7 +4,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import miyamoto.comunicaco_api.infraestructure.enums.ModoEnvioEnum;
 import miyamoto.comunicaco_api.infraestructure.enums.StatusEnvioEnum;
-
 import java.time.LocalDateTime;
 
 @Getter
