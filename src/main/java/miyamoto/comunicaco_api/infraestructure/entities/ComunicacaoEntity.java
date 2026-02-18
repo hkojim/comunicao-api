@@ -5,10 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import miyamoto.comunicaco_api.infraestructure.enums.ModoEnvioEnum;
 import miyamoto.comunicaco_api.infraestructure.enums.StatusEnvioEnum;
-
-import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Getter
 @Setter
