@@ -1,6 +1,5 @@
 package miyamoto.comunicaco_api.business.service;
 
-import jakarta.mail.MessagingException;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 @Service
@@ -27,7 +25,7 @@ public class EmailService {
     @Value("${envio.email.remetente}")
     public String remetente;
 
-    @Value("{$envio.email.nomeRemetente}")
+    @Value("${envio.email.nomeRemetente}")
     private String nomeRemetente;
 
     public void enviaEmail(ComunicacaoOutDTO dto){
@@ -47,12 +45,8 @@ public class EmailService {
             mimeMessageHelper.setText(template, true);
             javaMailSender.send(mensagem);
 
-        } catch (MessagingException | UnsupportedEncodingException e) {
-            throw new EmailException("Erro ao enviar o email ", e.getCause());
+        } catch (Exception e) { // Captura MessagingException, RuntimeException, etc.
+            throw new EmailException("Erro ao enviar o email ", e);
         }
     }
-
-
-
-
 }
