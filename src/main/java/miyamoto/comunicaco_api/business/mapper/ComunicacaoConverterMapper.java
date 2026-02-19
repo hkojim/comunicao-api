@@ -10,7 +10,4 @@ public interface ComunicacaoConverterMapper {
     //@Mapping(source = "dataHoraEnvio", target="dataHoraEnvio")
     ComunicacaoEntity paraComunicacaoEntity(ComunicacaoInDTO dto);
     ComunicacaoOutDTO paraComunicacaoOutDTO(ComunicacaoEntity entity);
-
-
-
 }

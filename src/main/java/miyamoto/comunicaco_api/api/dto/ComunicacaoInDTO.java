@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @ToString
+@EqualsAndHashCode
 public class ComunicacaoInDTO {
 
     @Schema(description = "Data e hora programada para o envio", example = "2026-12-25T10:00:00")
@@ -35,7 +36,4 @@ public class ComunicacaoInDTO {
 
     @Schema(description = "Status do envio", example = "MENSAGEM")
     private StatusEnvioEnum statusEnvio;
-
-
-
 }
